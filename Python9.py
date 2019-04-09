@@ -1,7 +1,16 @@
-import bz2
-
-un = b'BZh91AY&SYA\xaf\x82\r\x00\x00\x01\x01\x80\x02\xc0\x02\x00 \x00!\x9ah3M\x07<]\xc9\x14\xe1BA\x06\xbe\x084'
-pw = b'BZh91AY&SY\x94$|\x0e\x00\x00\x00\x81\x00\x03$ \x00!\x9ah3M\x13<]\xc9\x14\xe1BBP\x91\xf08'
-
-print(bz2.decompress(un))
-print(bz2.decompress(pw))
+#http://www.pythonchallenge.com/pc/return/good.html
+import numpy
+from matplotlib import pyplot
+first=[
+...
+]
+second=[
+...
+]
+x=numpy.r_[first[0::2]]
+y=numpy.r_[first[1::2]]
+x2=numpy.r_[second[0::2]]
+y2=numpy.r_[second[1::2]]
+pyplot.plot(-x,-y)
+pyplot.plot(-x2,-y2)
+pyplot.show()

@@ -1,13 +1,7 @@
-from PIL import Image
+import bz2
 
-img = Image.open('oxygen.png')
-pxbuffer = img.load()
+un = b'BZh91AY&SYA\xaf\x82\r\x00\x00\x01\x01\x80\x02\xc0\x02\x00 \x00!\x9ah3M\x07<]\xc9\x14\xe1BA\x06\xbe\x084'
+pw = b'BZh91AY&SY\x94$|\x0e\x00\x00\x00\x81\x00\x03$ \x00!\x9ah3M\x13<]\xc9\x14\xe1BBP\x91\xf08'
 
-output = ""
-for x in range(2, 609, 7) :
-    output += chr(pxbuffer[x, 47][0])
-
-print(output)
-
-
-#integrity
+print(bz2.decompress(un))
+print(bz2.decompress(pw))
